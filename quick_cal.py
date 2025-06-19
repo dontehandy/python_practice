@@ -13,6 +13,6 @@ def quick_cal(num1, op, num2):
 quick_cal(num1, op, num2)
 
 #this is just a test and to get familiar with python/vscode/github...again
-#19JUN25 - 1935hrspwd
+#19JUN25 - 1957hrspwd
 
 
