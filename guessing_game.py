@@ -26,3 +26,4 @@ while i <= 3:
 
 # print(and input boxes) 1. If user wins 2. If user loses
 #Modification 1: number 1-100, tell user if guess is too high/low ,and let them have 5-10 guesses.
+#coming back to try this ^^
