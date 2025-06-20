@@ -15,10 +15,7 @@ quick_cal(num1, op, num2)
 #this is just a test and to get familiar with python/vscode/github...again
 #19JUN25 - 1957hrs
 
-
 # git status               # See what's changed
 # git add quick_cal.py     # Stage the changes
 # git commit -m "Your message"   # Commit them
 # git push                 # Push to GitHub
-
-
