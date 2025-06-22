@@ -3,14 +3,15 @@
 # In the paragraph below, write a script to identify the longest sentence by word count.
 
 # answer sheet: 
+
 '''
-1.  47
-2.  42
-3.  39
-4.  35
-5.  33
-6.  24
-7.  20
+* **Sentence 1:** 17 words
+* **Sentence 2:** 27 words
+* **Sentence 3:** 20 words
+* **Sentence 4:** 27 words
+* **Sentence 5:** 35 words
+* **Sentence 6:** 27 words
+* **Sentence 7:** 33 words
 '''
 
 
@@ -27,12 +28,6 @@ replace_mt = unformatted_paragraph.replace("Mt.", "Mountain")
 split_at_space = replace_mt.split(" ")
 
 print(len(split_at_space)) 
-
-
-
-# i = 0
-# for words in len(split_to_list):
-#     print(words)
 
     
 
