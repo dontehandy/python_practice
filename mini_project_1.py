@@ -10,7 +10,7 @@ index3 - 30 words
 index4 - 36 words
 index5 - 28 words
 index6 - 33 words
-index7 - 1 words ** ??
+index7 - 1 words ** ?? #might have to make it strip
 
 '''
 
@@ -24,7 +24,7 @@ Washington State, through its stunning geography and vibrant ecosystems, stands 
 
 replace_mt = unformatted_paragraph.replace("Mt.", "Mount") #turn mt to mount to target "."
 
-each_sent = replace_mt.split(".") #split at "." - --the_list
+each_sent = replace_mt.split(".") #split at "." - --each_sent
 
 word_counter = [] #emp list being built to put the space count into
 
@@ -32,10 +32,8 @@ for words in each_sent:
     count = words.count(" ")
     word_counter.append(count)
 
-word_counter.sort()
+max_count = max(word_counter)
 
-print(word_counter[-1])
-
-
-if word_counter[-1] == each_sent[4].count(" "):
-    print("access")
+for index, sentence in enumerate(each_sent): #got how. learn why
+    if sentence.count(" ") == max_count:
+        print(f"Sentence {index} is the longest: {sentence.strip()}")
