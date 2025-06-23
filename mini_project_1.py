@@ -4,15 +4,7 @@
 
 # answer sheet: 
 
-'''
-* **Sentence 1:** 17 words
-* **Sentence 2:** 27 words
-* **Sentence 3:** 20 words
-* **Sentence 4:** 27 words
-* **Sentence 5:** 35 words
-* **Sentence 6:** 27 words
-* **Sentence 7:** 33 words
-'''
+
 
 
 unformatted_paragraph = """Nestled in the heart of the Pacific Northwest, Washington State is a mesmerizing blend of natural wonders and urban sophistication. 
@@ -23,13 +15,13 @@ Beyond its scenic landscapes, Washington's ecological diversity is a testament t
 This harmonious blend of natural beauty and wildlife creates a unique backdrop for the state, inviting both residents and visitors to immerse themselves in its outdoor wonders. 
 Washington State, through its stunning geography and vibrant ecosystems, stands as a beacon of the Pacific Northwest's splendor, embodying the essence of adventure and the tranquility of nature in one cohesive landscape."""
 
-replace_mt = unformatted_paragraph.replace("Mt.", "Mountain")
+replace_mt = unformatted_paragraph.replace("Mt.", "Mount") #turn mt to mount to target "."
 
-split_at_space = replace_mt.split(" ")
+split_at_period = replace_mt.split(".") #split at "."
 
-print(len(split_at_space)) 
+i = 0
+for space in split_at_period[0]:
+    if space == " ":
+        i = i + 1
 
-    
-
-
-
+print(f"Sentence has : {i + 1} words.")
