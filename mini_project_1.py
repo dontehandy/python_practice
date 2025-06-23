@@ -29,9 +29,13 @@ each_sent = replace_mt.split(".") #split at "." - --the_list
 word_counter = [] #emp list being built to put the space count into
 
 for words in each_sent:
-    count = words.count(" ") + 1
+    count = words.count(" ")
     word_counter.append(count)
 
 word_counter.sort()
 
 print(word_counter[-1])
+
+
+if word_counter[-1] == each_sent[4].count(" "):
+    print("access")
