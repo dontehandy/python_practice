@@ -2,10 +2,17 @@
 
 # In the paragraph below, write a script to identify the longest sentence by word count.
 
-# answer sheet: 
+'''
+index0 - 20 words
+index1 - 29 words
+index2 - 21 words
+index3 - 30 words
+index4 - 36 words
+index5 - 28 words
+index6 - 33 words
+index7 - 1 words ** ??
 
-
-
+'''
 
 unformatted_paragraph = """Nestled in the heart of the Pacific Northwest, Washington State is a mesmerizing blend of natural wonders and urban sophistication. 
 Its geography is a tapestry of contrasts, stretching from the rugged Pacific coastlines to the dense, verdant rainforests of the Olympic Peninsula, culminating in the majestic Cascade Mountains. 
@@ -17,11 +24,11 @@ Washington State, through its stunning geography and vibrant ecosystems, stands 
 
 replace_mt = unformatted_paragraph.replace("Mt.", "Mount") #turn mt to mount to target "."
 
-split_at_period = replace_mt.split(".") #split at "."
+x = replace_mt.split(".") #split at "." - using x for now
 
 i = 0
-for space in split_at_period[0]:
-    if space == " ":
+for char in x[0]:
+    if char == " ":
         i = i + 1
 
-print(f"Sentence has : {i + 1} words.")
+print(f"Sentence has: {i + 1} words.") #eh ..two spaces or more will throw this off
