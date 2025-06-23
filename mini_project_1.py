@@ -24,16 +24,14 @@ Washington State, through its stunning geography and vibrant ecosystems, stands 
 
 replace_mt = unformatted_paragraph.replace("Mt.", "Mount") #turn mt to mount to target "."
 
-the_list = replace_mt.split(".") #split at "." - --the_list
+each_sent = replace_mt.split(".") #split at "." - --the_list
 
-the_count = []
+word_counter = [] #emp list being built to put the space count into
 
-for item in the_list:
-    spaces = item.count(" ")
-    the_count.append(spaces)
+for words in each_sent:
+    count = words.count(" ") + 1
+    word_counter.append(count)
 
-the_count.sort()
+word_counter.sort()
 
-print(the_count[-1])
-
-
+print(word_counter[-1])
