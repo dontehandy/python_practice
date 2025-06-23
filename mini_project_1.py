@@ -24,11 +24,16 @@ Washington State, through its stunning geography and vibrant ecosystems, stands 
 
 replace_mt = unformatted_paragraph.replace("Mt.", "Mount") #turn mt to mount to target "."
 
-x = replace_mt.split(".") #split at "." - using x for now
+the_list = replace_mt.split(".") #split at "." - --the_list
 
-i = 0
-for char in x[0]:
-    if char == " ":
-        i = i + 1
+the_count = []
 
-print(f"Sentence has: {i + 1} words.") #eh ..two spaces or more will throw this off
+for item in the_list:
+    spaces = item.count(" ")
+    the_count.append(spaces)
+
+the_count.sort()
+
+print(the_count[-1])
+
+
