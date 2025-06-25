@@ -20,12 +20,10 @@ Ticket prices are generally $2 per play, and tickets can be purchased in most co
 
 #first build a list of usable numbers. #tuples
 
-white_ball_range = range(1,70)
-white_ball_tuple = tuple(white_ball_range)
+white_balls = tuple(range(1,70))
 
-red_ball_range = range(1, 27)
-red_ball_tuple = tuple(red_ball_range)
+red_balls = tuple(range(1, 27))
 
-print(white_ball_tuple)
-print(red_ball_tuple)
+print(white_balls)
+print(red_balls)
 
