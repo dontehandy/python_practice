@@ -28,9 +28,9 @@ each_sent = replace_mt.split(".") #split at "." - --each_sent
 
 word_counter = [] #emp list being built to put the space count into
 
-for words in each_sent:
-    count = words.count(" ")
-    word_counter.append(count)
+for chars in each_sent:
+    space_count = chars.count(" ") 
+    word_counter.append(space_count)
 
 max_count = max(word_counter)
 
