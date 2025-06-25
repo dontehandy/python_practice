@@ -11,12 +11,7 @@ However, the game also offers smaller prizes for matching fewer numbers, which h
 Ticket prices are generally $2 per play, and tickets can be purchased in most convenience stores and even online.
 '''
 
-# sudo for understanding:
-
-#select 5 numbers from a set of 69 white balls 1-69
-#select 1 number, as a powerball - red 1-26
-#to win must match all 5 + powerball
-#smaller prizes for matching few numbers
+#smaller prizes for matching few numbers (bonus)
 
 #first build a list of usable numbers. #tuples
 
@@ -27,7 +22,9 @@ red_balls = tuple(range(1, 27))
 # print(white_balls)
 # print(red_balls)
 
-#less choose numbers using input from user
+#select 5 numbers from a set of 69 white balls 1-69
+#select 1 number, as a powerball - red 1-26
+
 user_picks = []
 
 wb1 = int(input("1st Number: "))
@@ -48,7 +45,13 @@ user_picks.append(wb5)
 rb1 = int(input("Select Powerball: "))
 user_picks.append(rb1)
 
-print(user_picks)
+# print(user_picks)
+
+#to win must match all 5 + powerball
+
+
+
+
 
 
 
