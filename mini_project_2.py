@@ -53,6 +53,14 @@ print(the_pb_numbers)
 
 #to win must match all 5 + powerball
 
+rich_or_broke = set(user_picks) & set(the_pb_numbers)
+
+print(list(rich_or_broke))
+
+
+    
+
+
 
 
 
