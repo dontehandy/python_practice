@@ -13,39 +13,22 @@ Ticket prices are generally $2 per play, and tickets can be purchased in most co
 
 #smaller prizes for matching few numbers (bonus)
 
-#first build a list of usable numbers. #tuples
-
-white_balls = tuple(range(1,70))
-red_balls = tuple(range(1, 27))
-
-
-# print(white_balls)
-# print(red_balls)
 
 #select 5 numbers from a set of 69 white balls 1-69
 #select 1 number, as a powerball - red 1-26
 
-user_picks = []
 
-wb1 = int(input("1st Number: "))
-user_picks.append(wb1)
+#get computer to choose 5 and a pb
 
-wb2 = int(input("2nd Number: "))
-user_picks.append(wb2)
+import random
+white_balls = tuple(range(1,70))
+red_balls = tuple(range(1, 27))
+computer_5 = random.sample(white_balls, 5)
+computer_pb = random.sample(red_balls, 1)
+the_pb_numbers = computer_5 + computer_pb
 
-wb3 = int(input("3rd Number: "))
-user_picks.append(wb3)
+print(the_pb_numbers)
 
-wb4 = int(input("4th Number: "))
-user_picks.append(wb4)
-
-wb5 = int(input("5th Number: "))
-user_picks.append(wb5)
-
-rb1 = int(input("Select Powerball: "))
-user_picks.append(rb1)
-
-# print(user_picks)
 
 #to win must match all 5 + powerball
 
