@@ -14,14 +14,18 @@ Ticket prices are generally $2 per play, and tickets can be purchased in most co
 # sudo for understanding:
 
 #select 5 numbers from a set of 69 white balls 1-69
-#select 1 number, as a powerball - red 0-26
+#select 1 number, as a powerball - red 1-26
 #to win must match all 5 + powerball
 #smaller prizes for matching few numbers
 
-#first build a list of usable numbers. #revisit use of set, tuples
+#first build a list of usable numbers. #tuples
 
 white_ball_range = range(1,70)
 white_ball_tuple = tuple(white_ball_range)
 
+red_ball_range = range(1, 27)
+red_ball_tuple = tuple(red_ball_range)
+
 print(white_ball_tuple)
+print(red_ball_tuple)
 
