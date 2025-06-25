@@ -17,6 +17,27 @@ Ticket prices are generally $2 per play, and tickets can be purchased in most co
 #select 5 numbers from a set of 69 white balls 1-69
 #select 1 number, as a powerball - red 1-26
 
+user_picks = []
+
+wb1 = int(input("1st Number: "))
+user_picks.append(wb1)
+
+wb2 = int(input("2nd Number: "))
+user_picks.append(wb2)
+
+wb3 = int(input("3rd Number: "))
+user_picks.append(wb3)
+
+wb4 = int(input("4th Number: "))
+user_picks.append(wb4)
+
+wb5 = int(input("5th Number: "))
+user_picks.append(wb5)
+
+rb1 = int(input("Select Powerball: "))
+user_picks.append(rb1)
+
+print(user_picks)
 
 #get computer to choose 5 and a pb
 
