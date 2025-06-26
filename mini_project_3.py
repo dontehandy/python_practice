@@ -29,21 +29,32 @@ The showdown is where the players that have not folded compare their hands to ea
 '''
 
 card_nums = list(range(1, 14))  # flat list, not a list of a list
-
 poker_deck = {
     "club": card_nums,
     "diamond": card_nums,
     "heart": card_nums,
     "spade": card_nums
 }
-
 # print(card_nums)
 
-#card counter -- try to access and show 52 cards
-i = 1
+total_deck = []
+
 for suit in poker_deck:
     for card in poker_deck[suit]:
-        print(f"{i}: {suit} {card}")
-        i += 1
+        total_deck.append((suit, card))  # add tuple of (suit, value)
 
-        
+# print(total_deck)
+#create a hand first
+
+import random
+
+hand = []
+
+i = 0
+while i < 5:
+    dealt_card = random.sample(total_deck, k=1)
+    if dealt_card not in hand:
+        hand.append(dealt_card)
+        i = i + 1
+
+print(hand)
