@@ -19,22 +19,31 @@ The showdown is where the players that have not folded compare their hands to ea
 
 #thought is is create the four suits as keys and be able to access them:
 
-poker_deck = {
-    "club": 1,
-    "diamond": 2,
-    "heart": 3,
-    "spade": 4
+#i want to keep everything as and int in the value section 
 
+'''
+1 = "ACE"
+11 = "JACK"
+12 = "QUEEN"
+13 = "KING"
+'''
+
+card_nums = list(range(1, 14))  # flat list, not a list of a list
+
+poker_deck = {
+    "club": card_nums,
+    "diamond": card_nums,
+    "heart": card_nums,
+    "spade": card_nums
 }
 
-# print(poker_deck)
+# print(card_nums)
 
-# x = poker_deck.keys()
+#card counter -- try to access and show 52 cards
+i = 1
+for suit in poker_deck:
+    for card in poker_deck[suit]:
+        print(f"{i}: {suit} {card}")
+        i += 1
 
-# print(x)
-
-# y = poker_deck.values()
-
-# print(y)
-
-
+        
