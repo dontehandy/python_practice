@@ -1,10 +1,40 @@
 '''
-For this mini project, we are going to build a poker hand evaluator.  For those not familiar with poker, it is a card game played with a standard card deck of 52 cards. 
+For this mini project, we are going to build a poker hand evaluator.  
+For those not familiar with poker, it is a card game played with a standard card deck of 52 cards. 
 
-Poker, a game that comes in various forms, is a card game played with two or more people (the maximum player count is determined by the type of poker game).  The way the cards are dealt can vary wildly, but the base concept is the same:  A player wants to get the best 5-card hand possible and win the chips in the middle that have been bet.
+Poker, a game that comes in various forms, is a card game played with two or more people (the maximum player count is determined by the type of poker game).  
+The way the cards are dealt can vary wildly, but the base concept is the same:  
+A player wants to get the best 5-card hand possible and win the chips in the middle that have been bet.
 
 There are many more factors that drive poker gameplay (such as bluffing) but there is always one final comparison that determines a winner of a hand: The showdown.
 
 The showdown is where the players that have not folded compare their hands to each other to find a winner.
 '''
+
+#first is to build a deck
+
+# after research -- A standard poker deck contains 52 cards. 
+# These are divided into four suits: clubs, diamonds, hearts, and spades. 
+# Each suit has 13 cards: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, and King. 
+
+#thought is is create the four suits as keys and be able to access them:
+
+poker_deck = {
+    "club": 1,
+    "diamond": 2,
+    "heart": 3,
+    "spade": 4
+
+}
+
+# print(poker_deck)
+
+# x = poker_deck.keys()
+
+# print(x)
+
+# y = poker_deck.values()
+
+# print(y)
+
 
