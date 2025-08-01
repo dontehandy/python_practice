@@ -22,7 +22,6 @@ def MatchDigitDash(s: str) -> str:
 
 
 
-
 # --- Test Cases ---
 print(MatchDigitDash("3ab-"))         # true
 print(MatchDigitDash("hello 2xy-"))   # true
