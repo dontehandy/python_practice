@@ -5,15 +5,21 @@ def count_trend_switches(arr):
     from increasing to decreasing or vice versa.
     """
     counter = 0
-    for i in range(1, len(arr)-1):
-        if arr[i] < arr[i-1] and arr[i] > arr[i+1]:
-          counter +=1
+    prev_trend = None
+    for i in range(1, len(arr)):
+        if arr[i] > arr[i-1]:
+            cur_trend = "up"
+        elif arr[i] < arr[i-1]:
+            cur_trend = "down"
+        if prev_trend and cur_trend != prev_trend:
+            counter += 1
+        prev_trend = cur_trend
     return counter
 
 print("Testing count_trend_switches...")
-print(count_trend_switches([1, 3, 5, 4, 2, 6, 8, 5]))  # Expected: 2
+print(count_trend_switches([1, 3, 5, 4, 2, 6, 8, 5]))  # Expected: 3
 print(count_trend_switches([5, 4, 3, 2]))              # Expected: 0
-print(count_trend_switches([1, 2, 1, 2, 1]))           # Expected: 4
+print(count_trend_switches([1, 2, 1, 2, 1]))           # Expected: 3
 print()
 
 
