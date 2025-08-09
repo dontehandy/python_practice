@@ -5,22 +5,25 @@ def count_trend_switches(arr):
     from increasing to decreasing or vice versa.
     """
     counter = 0
-    prev_trend = None
+    prev = None
     for i in range(1, len(arr)):
         if arr[i] > arr[i-1]:
-            cur_trend = "up"
+            new = "up"
         elif arr[i] < arr[i-1]:
-            cur_trend = "down"
-        if prev_trend and cur_trend != prev_trend:
+            new = "down"
+        else:
+            continue
+        if prev and new != prev:
             counter += 1
-        prev_trend = cur_trend
-    return counter
+        prev = new
+    return f"You have {counter} changes!"
 
+ 
 print("Testing count_trend_switches...")
-print(count_trend_switches([1, 3, 5, 4, 2, 6, 8, 5]))  # Expected: 3
-print(count_trend_switches([5, 4, 3, 2]))              # Expected: 0
-print(count_trend_switches([1, 2, 1, 2, 1]))           # Expected: 3
-print()
+print(count_trend_switches([1, 3, 5, 4, 2, 6, 8, 5]))       # Expected: 3
+print(count_trend_switches([5, 4, 3, 2]))                   # Expected: 0
+print(count_trend_switches([1, 2, 1, 2, 1]))                # Expected: 3
+print(count_trend_switches([10, 21, 34, 17, 8, 3, 0, 40]))  # Expected: 2
 
 
 # # 3. First Valley Finder
@@ -59,3 +62,16 @@ print()
 # print(find_peak([10, 20, 30, 40])) # Expected: -1
 # print(find_peak([1, 2, 3, 2, 1]))  # Expected: 2
 # print()
+
+#    counter = 0
+#     prev_trend = None
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[i-1]:
+#             cur_trend = "up"
+#         elif arr[i] < arr[i-1]:
+#             cur_trend = "down"
+#         if prev_trend and cur_trend != prev_trend:
+#             counter += 1
+#         prev_trend = cur_trend
+#     return counter
+
