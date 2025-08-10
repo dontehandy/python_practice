@@ -1,35 +1,3 @@
-# 1. Longest Increasing Streak
-def longest_increasing_streak(arr):
-    """
-    Returns the length of the longest strictly increasing sequence
-    of consecutive elements in the array.
-    If the array is empty, return 0.
-    """
-
-    if arr == []:
-        return 0
-    counter = 1
-    streak = []
-    for i in range(1, len(arr)):
-        if arr[i] > arr[i-1]:
-            counter +=1
-        else:
-            streak.append(counter)
-            counter = 1
-    return max(streak) if streak else 1
-
-
- 
-
-
-
-print("Testing longest_increasing_streak...")
-print(longest_increasing_streak([1, 2, 3, 2, 4, 5, 6, 1]))  # Expected: 4  (2, 4, 5, 6)
-print(longest_increasing_streak([5, 4, 3, 2, 1]))           # Expected: 1  (any single number)
-print(longest_increasing_streak([]))                        # Expected: 0
-print()
-
-
 # 2. Plateau Peak Finder
 def find_plateau_peak(arr):
     """
@@ -39,7 +7,19 @@ def find_plateau_peak(arr):
     If no plateau peak exists, return -1.
     Example: In [1, 2, 5, 5, 3], the plateau peak starts at index 2.
     """
-    pass
+
+
+    for i in range(len(arr)-1):
+        if arr[i] == arr[i+1] and arr[i] == max(arr):
+            return i
+    return -1
+
+
+print("Testing find_plateau_peak...")
+print(find_plateau_peak([1, 2, 5, 5, 3]))                   # Expected: 2
+print(find_plateau_peak([1, 2, 3, 3, 3, 2, 1]))             # Expected: 2
+print(find_plateau_peak([1, 2, 3, 4, 5]))                   # Expected: -1
+print(find_plateau_peak([5, 5, 4, 3]))                      # Expected: 0
 
 
 # 3. Longest Zigzag Sequence
@@ -59,12 +39,7 @@ def longest_zigzag(arr):
 
 
 
-# print("Testing find_plateau_peak...")
-# print(find_plateau_peak([1, 2, 5, 5, 3]))                   # Expected: 2
-# print(find_plateau_peak([1, 2, 3, 3, 3, 2, 1]))             # Expected: 2
-# print(find_plateau_peak([1, 2, 3, 4, 5]))                   # Expected: -1
-# print(find_plateau_peak([5, 5, 4, 3]))                      # Expected: 0
-# print()
+
 
 # print("Testing longest_zigzag...")
 # print(longest_zigzag([1, 3, 2, 4, 3, 5]))                   # Expected: 6 (whole array zigzags)
@@ -83,3 +58,31 @@ def longest_zigzag(arr):
 #             length.append(counter)
 #             counter = 1
 #     return max(length) if length else 1
+
+#-----completed exercises
+
+# 1. Longest Increasing Streak
+# def longest_increasing_streak(arr):
+#     """
+#     Returns the length of the longest strictly increasing sequence
+#     of consecutive elements in the array.
+#     If the array is empty, return 0.
+#     """
+
+#     if arr == []:
+#         return 0
+#     counter = 1
+#     streak = []
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[i-1]:
+#             counter +=1
+#         else:
+#             streak.append(counter)
+#             counter = 1
+#     return max(streak) if streak else 1
+
+# print("Testing longest_increasing_streak...")
+# print(longest_increasing_streak([1, 2, 3, 2, 4, 5, 6, 1]))  # Expected: 4  (2, 4, 5, 6)
+# print(longest_increasing_streak([5, 4, 3, 2, 1]))           # Expected: 1  (any single number)
+# print(longest_increasing_streak([]))                        # Expected: 0
+# print()
