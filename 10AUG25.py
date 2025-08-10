@@ -5,17 +5,21 @@ def longest_increasing_streak(arr):
     of consecutive elements in the array.
     If the array is empty, return 0.
     """
+
     if arr == []:
         return 0
     counter = 1
-    length = []
+    streak = []
     for i in range(1, len(arr)):
         if arr[i] > arr[i-1]:
             counter +=1
-        elif arr[i] < arr[i-1]:
-            length.append(counter)
+        else:
+            streak.append(counter)
             counter = 1
-    return max(length) if length else 1
+    return max(streak) if streak else 1
+
+
+ 
 
 
 
@@ -67,3 +71,15 @@ def longest_zigzag(arr):
 # print(longest_zigzag([1, 2, 3, 4]))                         # Expected: 2 (only one up or one down allowed)
 # print(longest_zigzag([10]))                                 # Expected: 1
 # print(longest_zigzag([1, 3, 3, 2, 4]))                      # Expected: 3 (1, 3, 2 or 3, 2, 4)
+
+#    if arr == []:
+#         return 0
+#     counter = 1
+#     length = []
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[i-1]:
+#             counter +=1
+#         elif arr[i] < arr[i-1]:
+#             length.append(counter)
+#             counter = 1
+#     return max(length) if length else 1
