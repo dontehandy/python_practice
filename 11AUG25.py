@@ -24,50 +24,53 @@
 # print()
 
 
-# 2. Digital Root
-def digital_root(num):
-    """
-    Returns the digital root of num.
-    The digital root is the final single-digit value obtained by summing
-    the digits repeatedly.
-    Example: 942 -> 9+4+2 = 15 -> 1+5 = 6
-    """
-    while num >= 10:
-        numbers = []
-        for i in str(num):
-            numbers.append(int(i))
-        total = 0
-        for n in numbers:
-            total += n
-        num = total
-    return num
+# # 2. Digital Root
+# def digital_root(num):
+#     """
+#     Returns the digital root of num.
+#     The digital root is the final single-digit value obtained by summing
+#     the digits repeatedly.
+#     Example: 942 -> 9+4+2 = 15 -> 1+5 = 6
+#     """
+#     while num >= 10:
+#         numbers = []
+#         for i in str(num):
+#             numbers.append(int(i))
+#         total = 0
+#         for n in numbers:
+#             total += n
+#         num = total
+#     return num
         
 
-print("Testing digital_root...")
-print(digital_root(942))               # Expected: 6
-print(digital_root(132189))            # Expected: 6
-print(digital_root(493193))            # Expected: 2
-print()
+# print("Testing digital_root...")
+# print(digital_root(942))               # Expected: 6
+# print(digital_root(132189))            # Expected: 6
+# print(digital_root(493193))            # Expected: 2
+# print()
 
 
 # 3. Factorial Digit Sum
+
+import math 
+
 def factorial_digit_sum(num):
     """
     Returns the sum of the factorial of each digit in num.
     Example: 145 -> 1! + 4! + 5! = 1 + 24 + 120 = 145
     """
-    pass
+    numbers = []
+    for i in str(num):
+        numbers.append(int(i))
+    math_sum = 0
+    for n in numbers:
+        math_sum += math.factorial(n)
+    return math_sum
+    
 
 
-# -----------------
-# TEST CASES
-# -----------------
 
-
-
-
-
-# print("Testing factorial_digit_sum...")
-# print(factorial_digit_sum(145))        # Expected: 145
-# print(factorial_digit_sum(123))        # Expected: 9  (1! + 2! + 3! = 1 + 2 + 6)
-# print(factorial_digit_sum(40585))      # Expected: 40585
+print("Testing factorial_digit_sum...")
+print(factorial_digit_sum(145))        # Expected: 145
+print(factorial_digit_sum(123))        # Expected: 9  (1! + 2! + 3! = 1 + 2 + 6)
+print(factorial_digit_sum(40585))      # Expected: 40585
