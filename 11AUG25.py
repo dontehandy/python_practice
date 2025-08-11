@@ -32,13 +32,22 @@ def digital_root(num):
     the digits repeatedly.
     Example: 942 -> 9+4+2 = 15 -> 1+5 = 6
     """
-    pass
+    while num >= 10:
+        numbers = []
+        for i in str(num):
+            numbers.append(int(i))
+        total = 0
+        for n in numbers:
+            total += n
+        num = total
+    return num
+        
 
-# print("Testing digital_root...")
-# print(digital_root(942))               # Expected: 6
-# print(digital_root(132189))            # Expected: 6
-# print(digital_root(493193))            # Expected: 2
-# print()
+print("Testing digital_root...")
+print(digital_root(942))               # Expected: 6
+print(digital_root(132189))            # Expected: 6
+print(digital_root(493193))            # Expected: 2
+print()
 
 
 # 3. Factorial Digit Sum
