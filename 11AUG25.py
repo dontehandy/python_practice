@@ -52,22 +52,20 @@
 
 # 3. Factorial Digit Sum
 
-import math 
-
 def factorial_digit_sum(num):
-    """
-    Returns the sum of the factorial of each digit in num.
-    Example: 145 -> 1! + 4! + 5! = 1 + 24 + 120 = 145
-    """
-    numbers = []
-    for i in str(num):
-        numbers.append(int(i))
-    math_sum = 0
-    for n in numbers:
-        math_sum += math.factorial(n)
-    return math_sum
     
-
+    numbers = [] #establish a list called numbers
+    for i in str(num): #for every iterable in the casted sting of num
+        numbers.append(int(i)) #append it to the numbers list
+    count = 0 #set a count init with 0
+    for n in numbers: #for every number in numbers
+        fact = 1 # variable for factorial. start with 1
+        x = n # var x and sets it to the current iterable in numbers (n)
+        while x > 1: #while the number is greater than 1
+            fact *=x #multiplies current value of fact by x and stores the result
+            x -= 1 #x is now - 1 ans stored as the value of the var
+        count +=fact #add the result of fact to the count and repeat until at 1
+    return count #return the count 
 
 
 print("Testing factorial_digit_sum...")
